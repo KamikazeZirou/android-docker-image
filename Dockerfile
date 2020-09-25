@@ -7,7 +7,7 @@ RUN sudo curl -sL https://firebase.tools | bash
 RUN sudo apt-get update && sudo apt-get install -y fontconfig ttf-dejavu
 
 # Install Flutter SDK
-ARG flutter_version=1.20.2
+ARG flutter_version=1.20.4
 
 ENV FLUTTER_HOME=${HOME}/sdks/flutter \
     FLUTTER_VERSION=$flutter_version
