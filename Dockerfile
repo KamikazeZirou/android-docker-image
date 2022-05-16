@@ -15,7 +15,7 @@ RUN sudo apt-get update && sudo apt-get install -y fontconfig ttf-dejavu
 
 # Install Flutter SDK
 ENV PATH ${PATH}:${FLUTTER_HOME}/bin:${FLUTTER_HOME}/bin/cache/dart-sdk/bin
-RUN git clone --branch ${FLUTTER_VERSION} https://github.com/flutter/flutter.git ${FLUTTER_HOME}
+RUN git clone --depth 1 --branch ${FLUTTER_VERSION} https://github.com/flutter/flutter.git ${FLUTTER_HOME}
 RUN flutter precache
 
 # Ignore SIGPIPE because 'yes' always raises it.
